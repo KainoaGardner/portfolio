@@ -1,0 +1,275 @@
+:root {
+  color-scheme: light dark;
+  --light-color-background: #a4b0be;
+  --light-color-primary: #ced6e0;
+  --light-color-secondary: #ecf0f1;
+  --light-color-accent: #1e1e1e;
+  --light-font-color: #000000;
+  --light-color-outline: #e74c3c;
+
+  --dark-color-background: #060605;
+  --dark-color-primary: #1e1e1e;
+  --dark-color-secondary: #3a3535;
+  --dark-color-accent: #dcdde1;
+  --dark-font-color: #ecf0f1;
+  --dark-color-outline: #362c6k;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: light-dark(var(--light-color-accent), var(--dark-color-accent));
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.navLink {
+  font-size: 25px;
+  margin: 0px 10px;
+}
+
+p,
+h1,
+h2,
+h3 {
+  font-family: "Times New Roman", Times, serif;
+
+  color: light-dark(var(--light-font-color), var(--dark-font-color));
+  margin: 0px;
+}
+
+p {
+  color: light-dark(var(--light-color-accent), var(--dark-color-accent));
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h1 {
+  margin: 5px 0px;
+}
+
+body {
+  background-color: light-dark(
+    var(--light-color-background),
+    var(--dark-color-background)
+  );
+
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-top: 100px; */
+  padding: 25px 25px;
+
+  flex-grow: 1;
+}
+
+.nav,
+.about,
+.skills,
+.projects,
+.education,
+.tabs {
+  background-color: light-dark(
+    var(--light-color-primary),
+    var(--dark-color-primary)
+  );
+
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px;
+  min-width: 600px;
+  margin-bottom: 30px;
+}
+
+.nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+  margin: 0px 10px;
+}
+
+.name {
+  font-size: 45px;
+}
+.about {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.aboutText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+  padding: 0px 10px;
+  /* background-color: light-dark( */
+  /*   var(--light-color-secondary), */
+  /*   var(--dark-color-secondary) */
+  /* ); */
+}
+
+.aboutLinks {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+
+  padding: 10px;
+  width: 260px;
+  background-color: light-dark(
+    var(--light-color-secondary),
+    var(--dark-color-secondary)
+  );
+
+  border-radius: 10px;
+}
+
+.resume {
+  padding: 5px;
+  color: light-dark(var(--light-font-color), var(--dark-font-color));
+}
+
+.aboutLink {
+  font-size: 25px;
+}
+
+.headshot {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.skills {
+  width: 100%;
+  flex-direction: column;
+  min-width: 600px;
+}
+
+.skillsMain {
+  width: 100%;
+  margin: 10px 0px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  border-radius: 10px;
+
+  background-color: light-dark(
+    var(--light-color-secondary),
+    var(--dark-color-secondary)
+  );
+  /* border: solid 1px */
+  /*   light-dark(var(--light-color-outline), var(--dark-color-outline)); */
+}
+
+.skillsImg {
+  object-fit: cover;
+  height: 50px;
+  width: 50px;
+}
+
+.skillsItem {
+  width: 100px;
+  text-align: center;
+}
+
+.languages {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+}
+
+.projects {
+  width: 100%;
+  flex-direction: column;
+  min-width: 600px;
+}
+
+.projectsMain {
+  width: 100%;
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.projectsItem {
+  border-radius: 10px;
+  background-color: light-dark(
+    var(--light-color-secondary),
+    var(--dark-color-secondary)
+  );
+
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 15px 0px;
+  /* border: solid 1px */
+  /*   light-dark(var(--light-color-outline), var(--dark-color-outline)); */
+}
+
+.projectsImg {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+}
+
+.projectsLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.projectsRight {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projectsUsed {
+  display: flex;
+  justify-content: right;
+}
+
+.projectsLink {
+  margin: 0px 10px;
+}
+
+.projectsSkills {
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+  margin: 0px 5px;
+}
+
+.education {
+  width: 100%;
+  min-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.educationImg {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
